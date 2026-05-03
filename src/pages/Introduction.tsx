@@ -1,5 +1,5 @@
 
-import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export function Introduction() {
@@ -33,9 +33,9 @@ export function Introduction() {
                     Web Developer | Graphic Designer
                 </span>
                 <span className='py-6 flex gap-4'>
-                    <FaLinkedin size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" />
-                    <FaGithub size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" />
-                    <FaWhatsapp size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" />
+                    <FaLinkedin size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" onClick={() => window.open('https://www.linkedin.com/in/carl-nataño-87b760233', '_blank')} />
+                    <FaGithub size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" onClick={() => window.open('https://github.com/carloli5', '_blank')} />
+                    <FaFacebook size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" onClick={() => window.open('https://www.facebook.com/carloli05', '_blank')} />
                 </span>
             </motion.div>
         </div>
