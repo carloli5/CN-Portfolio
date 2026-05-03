@@ -14,10 +14,16 @@ import { useEffect } from "react";
 
 export function Homepage() {
     useEffect(() => {
-        const introElement = document.getElementById('introduction');
-        if (introElement) {
-            introElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
+        const timer = setTimeout(() => {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile) {
+                const introElement = document.getElementById('introduction');
+                if (introElement) {
+                    introElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }, 100);
+        return () => clearTimeout(timer);
     }, []);
     return (
         <>
