@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ContactForm } from "@/components/topBarComponents/ContactForm";
 import { NotificationContainer } from "@/components/NotificationContainer";
-import { useNotification } from "@/context/NotificationContext";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -19,7 +18,6 @@ export function TopBar() {
     const [activeTab, setActiveTab] = useState('introduction');
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const { addNotification } = useNotification();
 
     useEffect(() => {
         const handleScroll = () => {
