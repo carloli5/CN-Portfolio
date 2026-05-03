@@ -69,8 +69,6 @@ export function TopBar() {
                         </Button>
                     </span>
                 </nav>
-
-                {/* Mobile Menu Button */}
                 <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     className="md:hidden p-4 text-[#bd6d5d] cursor-pointer"
@@ -80,7 +78,7 @@ export function TopBar() {
             </header>
             
             {isMobileMenuOpen && (
-                <div className="fixed top-[80px] left-0 right-0 md:hidden bg-[#faf7f5] border-b border-gray-200 z-50">
+                <div className="fixed top-[100px] left-0 right-0 md:hidden bg-[#faf7f5] border-b border-gray-200 z-150">
                     <nav className="flex flex-col gap-4 p-4">
                         {navigation.map((item) => (
                             <a
