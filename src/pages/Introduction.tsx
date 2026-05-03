@@ -1,0 +1,43 @@
+
+import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+
+export function Introduction() {
+    return (
+        <div className="bg-[#faf7f5] min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 p-6">
+            <motion.img 
+                src='carl-pic.png' 
+                className="h-120 w-120" 
+                alt="Carl Nataño"
+                initial={{ opacity: 0, x: 140 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+            />
+            <motion.div 
+                className="flex flex-col items-center md:items-start text-center md:text-left"
+                initial={{ opacity: 0, x: -140 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+            >
+                <div className="flex flex-col text-8xl font-bold aboreto-regular text-[#323743] mb-4 gap-2">
+                    <span>
+                        Carl
+                    </span>
+                    <span>
+                        Nataño
+                    </span>
+                </div>
+                <span className="text-3xl text-[#565d6d] afacad-flux">
+                    Web Developer | Graphic Designer
+                </span>
+                <span className='py-6 flex gap-4'>
+                    <FaLinkedin size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" />
+                    <FaGithub size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" />
+                    <FaWhatsapp size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" />
+                </span>
+            </motion.div>
+        </div>
+    );
+}    
