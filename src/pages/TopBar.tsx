@@ -43,7 +43,7 @@ export function TopBar() {
         <>
             <header className="bg-[#faf7f5] flex sticky top-0 z-100 items-center justify-between">
                 <span>
-                    <img src="cn-logo.png" alt="Logo" className="h-20 w-auto sm:h-20 sm:w-auto md:h-30 md:w-30 object-cover pl-6" />
+                    <img src="cn-logo.png" alt="Logo" className="h-20 w-auto pl-2 sm:h-20 sm:w-auto md:h-30 md:w-30 object-cover sm:pl-2 md:pl-6" />
                 </span>
                 <nav className="hidden md:flex flex-row gap-12 items-center pr-15 py-4">
                     {navigation.map((item) => (
