@@ -6,10 +6,10 @@ export function Services() {
             <div className="flex flex-col gap-10 h-full">
                 <div className="flex flex-col md:flex-row h-auto md:h-50 gap-5">
                     <div className="flex-grow-1 p-2">
-                        <h1 className="text-6xl font-bold aboreto-regular text-[#bd6d5d] py-2">
+                        <h1 className="text-4xl font-bold aboreto-regular text-[#bd6d5d] py-2 sm:text-4xl md:text-6xl">
                             Services
                         </h1>
-                            <p className="afacad-flux text-[#323743] text-lg max-w-3xl">
+                            <p className="afacad-flux text-[#323743] text-base max-w-3xl sm:text-base md:text-lg">
                             I offer a range of services in web development and graphic design, including UI/UX design, front-end and back-end development. My goal is to create visually appealing, simple and user-friendly digital experiences that meet the needs of my clients. 
                             </p>
                     </div>
@@ -20,7 +20,7 @@ export function Services() {
                                 UI/UX Design
                                 </p>
                             </span>
-                            <img src="ui-img.png" alt="UI/UX Design" className="w-100 h-100" />
+                            <img src="ui-img.png" alt="UI/UX Design" className="h-60 w-60 sm:h-80 sm:w-80 md:h-100 md:w-100 object-cover rounded-lg" />
                         </CardContent>
                     </Card>
                 </div>
@@ -35,7 +35,7 @@ export function Services() {
                                 Development
                                 </p>
                             </span>
-                            <img src="front-end-img.png" alt="front-end" className="w-100 h-100" />
+                            <img src="front-end-img.png" alt="front-end" className="h-60 w-60 sm:h-80 sm:w-80 md:h-100 md:w-100 object-cover rounded-lg" />
                         </CardContent>
                     </Card>
                     <Card className="flex-grow-1 justify-center w-full md:w-auto" >
@@ -48,7 +48,7 @@ export function Services() {
                                 Development
                                 </p>
                             </span>
-                            <img src="back-end-img.png" alt="back-end" className="w-100 h-100" />
+                            <img src="back-end-img.png" alt="back-end" className="h-60 w-60 sm:h-80 sm:w-80 md:h-100 md:w-100 object-cover rounded-lg" />
                         </CardContent>
                     </Card>
                     <Card className="flex-grow-1 justify-center w-full md:w-auto" >
@@ -61,7 +61,7 @@ export function Services() {
                                 Management
                                 </p>
                             </span>
-                            <img src="database-img.png" alt="database management" className="w-100 h-100" />
+                            <img src="database-img.png" alt="database management" className="h-60 w-60 sm:h-80 sm:w-80 md:h-100 md:w-100 object-cover rounded-lg" />
                         </CardContent>
                     </Card>
                 </div>
@@ -76,7 +76,7 @@ export function Services() {
                                 Integration
                                 </p>
                             </span>
-                            <img src="api-img.png" alt="API integration" className="w-100 h-100" />
+                            <img src="api-img.png" alt="API integration" className="h-60 w-60 sm:h-80 sm:w-80 md:h-100 md:w-100 object-cover rounded-lg" />
                         </CardContent>
                     </Card>
                     <Card className="flex-grow-1 justify-center w-full md:w-auto" >
@@ -89,7 +89,7 @@ export function Services() {
                                 Design
                                 </p>
                             </span>
-                            <img src="graphic-design-img.png" alt="graphic design" className="w-100 h-100" />
+                            <img src="graphic-design-img.png" alt="graphic design" className="h-60 w-60 sm:h-80 sm:w-80 md:h-100 md:w-100 object-cover rounded-lg" />
                         </CardContent>
                     </Card>
                 </div>

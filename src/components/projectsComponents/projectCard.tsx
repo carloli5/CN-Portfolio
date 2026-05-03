@@ -71,49 +71,45 @@ export function ProjectCard(projectsdata: typeof projectsData[0]) {
         )}
         <button
           onClick={handlePrevious}
-          className="absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-black/50 hover:bg-black/70 text-white p-1 md:p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-black/50 hover:bg-black/70 text-white p-1 md:p-2 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity cursor-pointer"
         >
           <ChevronLeft size={20} className="md:w-6 md:h-6" />
         </button>
         <button
           onClick={handleNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-black/50 hover:bg-black/70 text-white p-1 md:p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-black/50 hover:bg-black/70 text-white p-1 md:p-2 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity cursor-pointer"
         >
           <ChevronRight size={20} className="md:w-6 md:h-6" />
         </button>
       </div>
       <CardHeader>
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <CardAction className="flex gap-2 flex-wrap cursor-help">
-                {projectsdata.technologies?.map((tech) => (
-                  <div key={tech} className="flex items-center gap-1">
-                    {projectsdata.customIcons?.[tech] ? (
-                      <img 
-                        src={projectsdata.customIcons[tech]} 
-                        alt={tech}
-                        className="w-4 md:w-5 h-4 md:h-5 object-contain"
-                      />
-                    ) : (
-                      techIconMap[tech.toLowerCase()]
-                    )}
-                  </div>
-                ))}
-              </CardAction>
-            </TooltipTrigger>
-            <TooltipContent side="bottom" className="bg-slate-900 text-white">
-              <div className="flex flex-col gap-1">
-                {projectsdata.technologies?.map((tech) => (
-                  <span key={tech} className="capitalize text-sm">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
-        <CardTitle className="px-2 md:px-4 pb-4 text-lg md:text-2xl">{projectsdata.title}</CardTitle>
+        <CardTitle className="flex flex-col items-start justify-between px-2 sm:flex-col sm:items-start md:flex-row md:px-4 pb-4 text-lg md:text-lg">
+          {projectsdata.title}
+          <div className="flex gap-2 flex-wrap justify-start min-w-35 justify-end sm:justify-start md:justify-end pt-1">
+            <TooltipProvider>
+              {projectsdata.technologies?.map((tech) => (
+                <Tooltip key={tech}>
+                  <TooltipTrigger asChild>
+                    <div className="flex items-center gap-1 cursor-help">
+                      {projectsdata.customIcons?.[tech] ? (
+                        <img 
+                          src={projectsdata.customIcons[tech]} 
+                          alt={tech}
+                          className="w-4 md:w-5 h-4 md:h-5 object-contain"
+                        />
+                      ) : (
+                        techIconMap[tech.toLowerCase()]
+                      )}
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="bg-slate-900 text-white">
+                    <span className="capitalize text-sm">{tech}</span>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
+            </TooltipProvider>
+          </div>
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <CardDescription className="px-2 md:px-4 space-y-2 transition-opacity duration-300 text-sm md:text-base">
