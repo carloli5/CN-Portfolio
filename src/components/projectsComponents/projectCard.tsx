@@ -112,6 +112,11 @@ export function ProjectCard(projectsdata: typeof projectsData[0]) {
       </CardHeader>
       <CardContent>
         <CardDescription className="px-2 md:px-4 space-y-2 transition-opacity duration-300 text-sm md:text-base">
+          {projectsdata.date && (
+            <span className="text-sm text-muted-foreground afacad-flux italic">
+              {projectsdata.date}
+            </span>
+          )}
           <p>{projectsdata.description[currentImageIndex]}</p>
         </CardDescription>
       </CardContent>
