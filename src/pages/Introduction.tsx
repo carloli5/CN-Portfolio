@@ -30,7 +30,7 @@ export function Introduction() {
                     </span>
                 </div>
                 <span className="text-xl text-[#565d6d] afacad-flux sm:text-xl md:text-3xl">
-                    Web Developer | Graphic Designer
+                    Web Developer | UI/UX Designer
                 </span>
                 <span className='py-6 flex gap-4'>
                     <FaLinkedin size={32} className="text-[#bd6d5d] cursor-pointer hover:text-[#323743]" onClick={() => window.open('https://www.linkedin.com/in/carl-nataño-87b760233', '_blank')} />
